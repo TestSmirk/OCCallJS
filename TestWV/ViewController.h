@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JavaScriptCore/JavaScriptCore.h>
+@interface ViewController : UIViewController <UIWebViewDelegate>
+@property (nonatomic, strong) JSContext *jsContext;
 
-@interface ViewController : UIViewController
-
+-(void)call;
+-(void)getCall:(NSString *)callString;
 
 @end
 
